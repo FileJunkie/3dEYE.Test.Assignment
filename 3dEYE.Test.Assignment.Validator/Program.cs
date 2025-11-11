@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using _3dEYE.Test.Assignment.Validator;
+using CommandLine;
+
+await Parser.Default.ParseArguments<Arguments>(args)
+    .WithParsedAsync(SortedFileValidator.ValidateFileAsync);

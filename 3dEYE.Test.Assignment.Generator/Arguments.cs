@@ -8,8 +8,8 @@ public class Arguments
     [Option(HelpText = "File size in gigabytes", Default = 4)]
     public required int FileSizeInGb { get; init; }
 
-    [Option(HelpText = "File name", Default = "testFile.txt")]
-    public required string FileName { get; init; }
+    [Option(HelpText = "Path to the output file", Default = "testFile.txt")]
+    public required string FilePath { get; init; }
 
     // TODO validation
     [Option(HelpText = "String duplicates ratio", Default = 0.01)]

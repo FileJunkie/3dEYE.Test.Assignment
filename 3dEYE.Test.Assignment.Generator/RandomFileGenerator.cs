@@ -4,7 +4,7 @@ public static class RandomFileGenerator
 {
     public static async Task GenerateAsync(Arguments arguments)
     {
-        await using var file = new FileStream(arguments.FileName, FileMode.Create);
+        await using var file = new FileStream(arguments.FilePath, FileMode.Create);
         await using var textWriter = new StreamWriter(file);
 
         var targetFileSize = arguments.FileSizeInGb * 1024L * 1024L * 1024L;
